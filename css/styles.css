@@ -60,7 +60,6 @@ img {
 .menu {
   display: flex;
   gap: 40px;
-  padding: 24px 0;
 }
 .logo {
   font-family: "Raleway", sans-serif;
@@ -71,9 +70,12 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+.logo-header {
+  margin-right: 76px;
+  padding: 24px 0;
+}
 .header-logo {
   color: var(--dark);
-  margin-right: 76px;
 }
 
 .header-text {
@@ -82,10 +84,16 @@ img {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  padding: 24px 0;
 }
 .header-text:hover,
 .header-text:focus {
   color: var(--presssed-state);
+}
+.mail-normal {
+  font-style: normal;
+  margin-left: auto;
+  padding: 24px 0;
 }
 .contacts {
   color: var(--text);
@@ -93,10 +101,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-.mail-normal {
-  font-style: normal;
-  margin-left: auto;
-}
+
 .contacts:hover,
 .contacts:focus {
   color: var(--presssed-state);
