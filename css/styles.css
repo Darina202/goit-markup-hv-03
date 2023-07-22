@@ -48,18 +48,19 @@ img {
 }
 /*------------HEADER-----------*/
 .header {
-  padding: 24px 0;
+  border-bottom: 1px solid var(--accent);
 }
 .header-container {
   display: flex;
 }
 .header-nav {
   display: flex;
-  gap: 76px;
+  align-items: center;
 }
 .menu {
   display: flex;
   gap: 40px;
+  padding: 24px 0;
 }
 .logo {
   font-family: "Raleway", sans-serif;
@@ -72,6 +73,7 @@ img {
 }
 .header-logo {
   color: var(--dark);
+  margin-right: 76px;
 }
 
 .header-text {
@@ -104,16 +106,13 @@ img {
 /*------------HERO-----------*/
 
 .hero {
-  padding-bottom: 120px;
+  padding: 188px 0;
+  background: var(--dark);
 }
 .hero-container {
-  background: var(--dark);
-  padding-top: 188px;
-  padding-left: 316px;
-  padding-right: 316px;
-  padding-bottom: 188px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .hero-name {
   color: var(--white-background);
@@ -121,6 +120,7 @@ img {
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
+  max-width: 496px;
   margin-bottom: 48px;
 }
 .hero-btn {
@@ -133,6 +133,8 @@ img {
   letter-spacing: 0.04em;
   background: var(--primary-brand);
   cursor: pointer;
+  min-width: 169px;
+  border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   padding: 16px 32px;
@@ -144,7 +146,14 @@ img {
 }
 /*------------SECTION1-----------*/
 .advanced {
-  padding-bottom: 120px;
+  padding: 120px 0;
+}
+.advanced-list {
+  display: flex;
+  gap: 24px;
+}
+.item-list {
+  width: calc((100% - 72px) / 4);
 }
 .advanced-header {
   color: var(--dark);
@@ -159,10 +168,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-.advanced-list {
-  display: flex;
-  gap: 24px;
-}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -180,7 +186,6 @@ img {
 .acting {
   padding-bottom: 120px;
 }
-
 .acting-list {
   display: flex;
   gap: 24px;
@@ -194,12 +199,14 @@ img {
   text-transform: capitalize;
   margin-bottom: 72px;
 }
-
+.acting-item {
+  width: calc((100% - 48px) / 3);
+}
 /*------------SECTION3-----------*/
 
 .team {
   background: var(--light);
-  padding-bottom: 120px;
+  padding: 120px 0;
 }
 .team-list {
   display: flex;
@@ -222,14 +229,16 @@ img {
   letter-spacing: 0.02em;
 }
 .team-text {
-  padding: 32px 16px;
+  padding: 32px 0;
 }
 .team-back {
   background: var(--white-background);
+  width: calc((100% - 72px) / 4);
 }
 /*------------FOOTER-----------*/
 .footer {
   background: var(--dark);
+  padding: 100px 0;
 }
 .footer-logo {
   color: var(--light);
@@ -239,20 +248,36 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-top: 16px;
+
   max-width: 264px;
 }
-.footer-container {
-  padding-top: 100px;
-  padding-bottom: 100px;
+.logo-footer {
+  display: inline-block;
+  margin-bottom: 16px;
 }
 /*------------PORTFOLIO-----------*/
-.menu-btn {
-  padding: 96px 271px 72px;
+.portfolio {
+  padding-top: 96px;
+  padding-bottom: 120px;
 }
+
 .menu-list {
   display: flex;
+  justify-content: center;
   gap: 24px;
+  margin-bottom: 72px;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .list-btn {
   background: var(--light);
@@ -265,11 +290,10 @@ img {
   letter-spacing: 0.04em;
   cursor: pointer;
   border: none;
-  border-radius: 4px;
-  border: 1px solid var(--cornflower, #e7e9fc);
-  justify-content: center;
-  align-items: center;
   padding: 12px 24px;
+  border-radius: 4px;
+  border: 1px solid var(--accent);
+  align-items: center;
   max-width: 120px;
 }
 
@@ -277,6 +301,7 @@ img {
 .list-btn:focus {
   background: var(--presssed-state);
   color: var(--white-background);
+  border: 1px solid transparent;
 }
 .cards {
   display: flex;
@@ -285,13 +310,15 @@ img {
   column-gap: 24px;
   padding-bottom: 120px;
 }
+.cards-item {
+  width: calc((100% - 48px) / 3);
+}
 .cards-names {
   color: var(--dark);
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
-
   margin-bottom: 8px;
 }
 .cards-description {
@@ -301,10 +328,7 @@ img {
   letter-spacing: 0.02em;
 }
 .cards-size {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  padding-left: 16px;
-  border-right: 1px solid var(--accent);
-  border-left: 1px solid var(--accent);
-  border-bottom: 1px solid var(--accent);
+  padding: 32px 16px;
+  border: 1px solid var(--accent);
+  border-top: none;
 }
